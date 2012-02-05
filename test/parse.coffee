@@ -308,3 +308,7 @@ describe 'parse', ->
       root.children.should.have.length 1
       root.children[0].type.should.equal 'directive'
       
+    it "should consider / as an attribute", ->
+      root = parse('<br />')
+      
+      console.log root.children[0]
